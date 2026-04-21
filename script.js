@@ -9,6 +9,7 @@ window.addEventListener('scroll', function() {
     if (scrollTop > lastScrollTop && scrollTop > 100) {
         navbar.classList.add('navbar-hidden');
     } 
+        
     // 向上滑动
     else {
         navbar.classList.remove('navbar-hidden');
