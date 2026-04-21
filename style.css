@@ -91,7 +91,7 @@ body {
 }
 
 .hero-content h2 { font-size: 3rem; margin-bottom: 1rem; }
-.highlight { color: #FBBC05; background: rgba(255,255,255,0.1); padding: 0 10px; }
+.highlight { color: #FBBC05; padding: 0 10px; }
 .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
 
 .btn {
