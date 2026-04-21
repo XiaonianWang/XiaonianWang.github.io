@@ -1,56 +1,100 @@
-# XiaonianWang.github.io
-<!-- 顶部横幅（可替换图片链接） -->
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=30&duration=3000&color=2196F3&center=true&vCenter=true&width=600&height=50&lines=Hi+There+👋+I'm+【你的昵称】;Welcome+to+My+GitHub+Profile!" alt="Typing SVG">
-</div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人网站</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">个人网站</h1>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
 
----
+    <!-- 首页横幅 -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h2>你好，我是 <span class="highlight">你的名字</span></h2>
+            <p>一名热爱编程的开发者 | 持续学习 | 持续进步</p>
+            <a href="#projects" class="btn">查看我的项目</a>
+        </div>
+    </header>
 
-### 👨‍💻 关于我
-- 🔭 目前正在学习：【前端/后端/AI/全栈 等】
-- 🌱 常用技术栈：【你的主攻方向，例：Java + SpringBoot / Vue + React】
-- 📫 联系邮箱：【你的邮箱，例：xxx@163.com】
-- ⚡ 个人特点：【一句话介绍自己，例：热爱编程、持续学习、喜欢折腾新技术】
+    <!-- 关于我 -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <p class="about-text">
+                我是一名前端/后端/全栈开发者，喜欢探索新技术，擅长构建美观实用的网站和应用。<br>
+                热爱开源，乐于分享，持续在编程的道路上前行。
+            </p>
+        </div>
+    </section>
 
----
+    <!-- 技能栈 -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">我的技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Git</div>
+                <div class="skill-card">GitHub</div>
+                <div class="skill-card">Vue/React</div>
+            </div>
+        </div>
+    </section>
 
-### 🛠 技能栈
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,vue,react,git,github,java,python,mysql,linux" />
-</div>
+    <!-- 项目展示 -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">我的项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>项目1</h3>
+                    <p>个人博客系统，使用HTML+CSS+JS开发</p>
+                </div>
+                <div class="project-card">
+                    <h3>项目2</h3>
+                    <p>响应式电商网站首页</p>
+                </div>
+                <div class="project-card">
+                    <h3>项目3</h3>
+                    <p>GitHub数据统计工具</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
----
+    <!-- 联系方式 -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <p>邮箱：your-email@xxx.com</p>
+            <p>GitHub：github.com/你的用户名</p>
+        </div>
+    </section>
 
-### 📊 GitHub 数据统计
-<div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=【你的GitHub用户名】&show_icons=true&theme=blueberry&hide_border=true" alt="stats" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=【你的GitHub用户名】&theme=blueberry&hide_border=true" alt="streak" />
-</div>
-<div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=【你的GitHub用户名】&layout=compact&theme=blueberry&hide_border=true" alt="top langs" />
-</div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 我的个人网站 | 版权所有</p>
+        </div>
+    </footer>
 
----
-
-### 🚀 我的项目
-| 项目名称 | 项目描述 | 技术栈 | 链接 |
-| --- | --- | --- | --- |
-| 项目1 | 【项目简介】 | 【技术】 | [GitHub](https://github.com/【用户名】/项目名) |
-| 项目2 | 【项目简介】 | 【技术】 | [GitHub](https://github.com/【用户名】/项目名) |
-| 学习笔记 | 编程学习总结文档 | Markdown | [查看](https://github.com/【用户名】/学习笔记) |
-
----
-
-### 📞 联系方式
-<div align="center">
-  <a href="mailto:【你的邮箱】"><img src="https://img.shields.io/badge/邮箱-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="邮箱"></a>
-  <a href="https://github.com/【你的用户名】"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <!-- 可选：微信/CSDN/掘金 等，自行添加 -->
-</div>
-
----
-
-### 👀 访客统计
-<div align="center">
-  <img src="https://visit-counter.vercel.app/counter?page=【你的GitHub用户名】/【你的GitHub用户名】&theme=blue" alt="访客数">
-</div>
+    <!-- 引入交互脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>
