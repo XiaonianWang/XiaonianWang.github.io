@@ -142,3 +142,78 @@ body {
 .project-card:hover { transform: translateY(-10px); }
 
 .footer { background: #111; color: #777; padding: 20px 0; text-align: center; font-size: 0.9rem; }
+
+
+.experiences-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.photo-column {
+    flex: 0 0 300px;
+}
+
+.photo-column .profile-photo {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s;
+}
+
+.photo-column .profile-photo:hover {
+    transform: scale(1.03);
+}
+
+.content-column {
+    flex: 1;
+    text-align: left;
+}
+
+.content-column h3 {
+    font-size: 1.6rem;
+    margin: 40px 0 18px 0;
+    color: #222;
+    position: relative;
+}
+
+.content-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 45px;
+    height: 3px;
+    background: #4285F4;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li {
+    padding: 12px 0;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.experience-list li:last-child {
+    border-bottom: none;
+}
+
+/* 移动端响应式 */
+@media (max-width: 768px) {
+    .experiences-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .photo-column {
+        flex: 0 0 auto;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
