@@ -1,31 +1,144 @@
-/* 1. 修正导航栏定位 */
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 导航栏样式：更窄、更丝滑 */
 .navbar {
-    background: #222;
-    color: white;
-    padding: 1rem 0;
+    background: rgba(34, 34, 34, 0.95); /* 稍微透明更有质感 */
+    height: 60px; /* 固定高度，收窄黑边 */
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;    /* 必须加上，确保从最左侧开始 */
-    z-index: 1000;
-}
-
-/* 2. 增强全局重置，防止溢出 */
-html, body {
+    left: 0;
     width: 100%;
-    overflow-x: hidden; /* 防止移动端出现左右晃动 */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* 丝滑展开收起 */
 }
 
-/* 3. 修正 Hero 区域 */
+/* 导航栏隐藏类 (由JS控制) */
+.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4285F4;
+}
+
+/* 首页 Hero 区域 */
 .hero {
-    min-height: 100vh; /* 使用 min-height 更稳妥 */
-    background: linear-gradient(135deg, #4285F4, #34A853);
+    height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 0;      /* 改为 0，用 padding 处理遮挡 */
-    padding-top: 70px;  /* 用 padding 留出导航栏的空间 */
-    width: 100%;
 }
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content h2 { font-size: 3rem; margin-bottom: 1rem; }
+.highlight { color: #FBBC05; background: rgba(255,255,255,0.1); padding: 0 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+.btn {
+    padding: 12px 30px;
+    background: white;
+    color: #b21f1f;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* 区块通用 */
+.section { padding: 80px 0; text-align: center; }
+.section-title { font-size: 2rem; margin-bottom: 3rem; position: relative; }
+.section-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #4285F4;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-light { background: #f8f9fa; }
+.bg-dark { background: #222; }
+.text-white { color: white; }
+
+/* 技能与项目卡片 */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card, .project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+
+.footer { background: #111; color: #777; padding: 20px 0; text-align: center; font-size: 0.9rem; }
