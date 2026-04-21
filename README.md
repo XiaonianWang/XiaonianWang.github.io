@@ -24,7 +24,7 @@
         <div class="hero-content">
             <h2>你好，我是 <span class="highlight">王小年</span></h2>
             <p>一名热爱编程的开发者 | 持续学习 | 持续进步</p>
-            <a href="#projects" class="btn">查看我的项目</a>
+            <a href="#projects" class="btn">了解更多！</a>
         </div>
     </header>
 
@@ -43,7 +43,7 @@
             <h2 class="section-title">我的技能</h2>
             <div class="skills-grid">
                 <div class="skill-card">HTML/CSS</div>
-                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">C++</div>
                 <div class="skill-card">Git</div>
                 <div class="skill-card">Python</div>
                 <div class="skill-card">Matlab</div>
@@ -64,8 +64,8 @@
                     <p>适用于水下环境的仿生假手原型开发</p>
                 </div>
                 <div class="project-card">
-                    <h3>GitHub数据统计</h3>
-                    <p>自动化生成个人数据可视化报告</p>
+                    <h3>基于知识增强的优化智能体</h3>
+                    <p>融合模糊控制与启发函数的垂类模型</p>
                 </div>
             </div>
         </div>
@@ -74,7 +74,8 @@
     <section id="contact" class="section bg-dark">
         <div class="container">
             <h2 class="section-title text-white">联系我</h2>
-            <p class="text-white">邮箱：wangxiaonian@example.com</p>
+            <p class="text-white">微信：wyb1601187364</p>
+            <p class="text-white">邮箱：xiaonian_wang@qq.com</p>
             <p class="text-white">GitHub：github.com/xiaonianwang</p>
         </div>
     </section>
