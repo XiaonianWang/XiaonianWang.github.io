@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站</title>
+    <title>王小年的个人网站</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏（修正结构，确保flex对齐） -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <h1 class="logo">个人网站</h1>
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
@@ -21,7 +20,6 @@
         </div>
     </nav>
 
-    <!-- 首页横幅 -->
     <header id="home" class="hero">
         <div class="hero-content">
             <h2>你好，我是 <span class="highlight">王小年</span></h2>
@@ -30,8 +28,7 @@
         </div>
     </header>
 
-    <!-- 关于我 -->
-    <section id="about" class="about section">
+    <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">关于我</h2>
             <p class="about-text">
@@ -41,13 +38,11 @@
         </div>
     </section>
 
-    <!-- 技能栈 -->
-    <section id="skills" class="skills section">
+    <section id="skills" class="section bg-light">
         <div class="container">
             <h2 class="section-title">我的技能</h2>
             <div class="skills-grid">
-                <div class="skill-card">HTML</div>
-                <div class="skill-card">CSS</div>
+                <div class="skill-card">HTML/CSS</div>
                 <div class="skill-card">JavaScript</div>
                 <div class="skill-card">Git</div>
                 <div class="skill-card">Python</div>
@@ -56,8 +51,7 @@
         </div>
     </section>
 
-    <!-- 项目展示 -->
-    <section id="projects" class="projects section">
+    <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">我的项目</h2>
             <div class="projects-grid">
@@ -70,27 +64,23 @@
                     <p>适用于水下环境的仿生假手原型开发</p>
                 </div>
                 <div class="project-card">
-                    <h3>GitHub数据统计工具</h3>
-                    <p>自动化生成个人GitHub数据可视化报告</p>
+                    <h3>GitHub数据统计</h3>
+                    <p>自动化生成个人数据可视化报告</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系方式 -->
-    <section id="contact" class="contact section">
+    <section id="contact" class="section bg-dark">
         <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <p>邮箱：wangxiaonian@example.com</p>
-            <p>GitHub：github.com/xiaonianwang</p>
+            <h2 class="section-title text-white">联系我</h2>
+            <p class="text-white">邮箱：wangxiaonian@example.com</p>
+            <p class="text-white">GitHub：github.com/xiaonianwang</p>
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 王小年的个人网站 | 版权所有</p>
-        </div>
+        <p>&copy; 2026 王小年 | 版权所有</p>
     </footer>
 
     <script src="script.js"></script>
