@@ -1,20 +1,4 @@
-/* 全局重置（彻底清除默认样式，解决“歪”的问题） */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* 统一全局字体，避免大小不一 */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-}
-
-/* 通用容器：强制居中+宽度限制 */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* 导航栏（重点修正！） */
+/* 1. 修正导航栏定位 */
 .navbar {
     background: #222;
     color: white;
@@ -22,146 +6,26 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
+    left: 0;    /* 必须加上，确保从最左侧开始 */
+    z-index: 1000;
 }
 
-/* 导航容器：强制水平分布+垂直居中 */
-.navbar .container {
-    display: flex;
-    justify-content: space-between; /* 标题左、链接右，均匀分布 */
-    align-items: center; /* 关键！让标题和链接垂直居中，解决“歪”的问题 */
+/* 2. 增强全局重置，防止溢出 */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* 防止移动端出现左右晃动 */
 }
 
-/* 标题样式：统一字体大小 */
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-/* 导航链接容器：清除默认列表样式 */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-/* 导航链接：强制统一字体大小，解决“有大有小” */
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem; /* 固定字体大小，和标题形成合理层级 */
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #4285F4;
-}
-
-/* 首页横幅 */
+/* 3. 修正 Hero 区域 */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* 使用 min-height 更稳妥 */
     background: linear-gradient(135deg, #4285F4, #34A853);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    /* 修正导航栏遮挡问题 */
-    margin-top: 64px;
-}
-
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.highlight {
-    color: #FBBC05;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    padding: 12px 24px;
-    background: white;
-    color: #4285F4;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #f5f5f5;
-}
-
-/* 通用区块 */
-.section {
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #222;
-}
-
-/* 技能网格 */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.skill-card {
-    padding: 1rem;
-    background: #f5f5f5;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* 项目网格 */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    padding: 2rem;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
-    margin-bottom: 1rem;
-    color: #4285F4;
-}
-
-/* 页脚 */
-.footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
-    }
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-    /* 移动端导航栏文字缩小 */
-    .nav-links a {
-        font-size: 0.9rem;
-    }
+    margin-top: 0;      /* 改为 0，用 padding 处理遮挡 */
+    padding-top: 70px;  /* 用 padding 留出导航栏的空间 */
+    width: 100%;
 }
