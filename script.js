@@ -42,7 +42,7 @@ const langData = {
         'hero-btn': 'Learn More',
         'about-content': 'Student at the College of Artificial Intelligence, Nankai University. Focusing on Control Theory and Microrobotics. 🤓<br>Passionate about AI and Large Language Models.<br>Amateur poet, also enjoy table tennis, football, volleyball, and swimming. 😋<br>Dream is to return to the countryside after finishing studies.<br>Welcome to discuss any interesting topics with me!',
         'exp-edu-title': 'Education',
-        'exp-edu-list': '<li>Nankai Univ, AI College, 2024.9-Present</li><li>Nankai Univ, Business School, 2023.9-2024.9</li><li>Xianghe No.1 High School, 2020.9-2023.6</li><li>Xianghe No.2 High School, 2017.9-2020.7</li>',
+        'exp-edu-list': '<li>Nankai University, College of Artificial and Intelligence 2024.9-Present</li><li>Nankai University, Business School 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
         'exp-honors-title': 'Honors',
         'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li>',
         'exp-work-title': 'Activities',
