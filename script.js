@@ -46,7 +46,7 @@ const langData = {
         'exp-honors-title': 'Honors',
         'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li>',
         'exp-work-title': 'Activities',
-        'exp-work-list': '<li>Staff, Student Affairs Dept, NKU</li><li>Member, Video Group, Publicity Dept, NKU</li><li>Delegate, 31st NKU Student Congress</li><li>News Writer, NKU Tourism Conference 2024</li>',
+        'exp-work-list': '<li>Staff, Student Affairs Dept, NKU</li><li>Member, Video Group, Publicity Dept, NKU</li><li>Delegate, 31st NKU Student Congress</li><li>News Writer, China Culture and Tourism Industries Expo & NKU Tourism Conference 2024</li>',
         'proj-1-t': 'Microrobots (Researching)',
         'proj-1-d': 'Design and implementation of magnetic-controlled microrobots',
         'proj-2-t': 'EMG Prosthetic Hand (Researching)',
