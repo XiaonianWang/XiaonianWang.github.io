@@ -9,29 +9,30 @@
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <h1 class="logo">个人网站</h1>
+            <h1 class="logo" data-key="nav-logo">个人网站</h1>
             <ul class="nav-links">
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#experiences">经历</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系我</a></li>
+                <li><a href="#home" data-key="nav-home">首页</a></li>
+                <li><a href="#about" data-key="nav-about">关于我</a></li>
+                <li><a href="#experiences" data-key="nav-exp">经历</a></li>
+                <li><a href="#projects" data-key="nav-projects">项目</a></li>
+                <li><a href="#contact" data-key="nav-contact">联系我</a></li>
+                <li><a href="javascript:void(0)" id="lang-switch" style="color: #FBBC05; font-weight: bold;">EN</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="hero-content">
-            <h2>你好，我是 <span class="highlight">王小年</span></h2>
-            <p>欢迎来到我的个人主页🤓👆</p>
-            <a href="#about" class="btn">了解更多！</a>
+            <h2><span data-key="hero-hi">你好，我是</span> <span class="highlight">王小年</span></h2>
+            <p data-key="hero-sub">欢迎来到我的个人主页🤓👆</p>
+            <a href="#about" class="btn" data-key="hero-btn">了解更多！</a>
         </div>
     </header>
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <p class="about-text">
+            <h2 class="section-title" data-key="nav-about">关于我</h2>
+            <p class="about-text" data-key="about-content">
                 就读于南开大学人工智能学院，“深耕”于控制理论、微纳机器人等方向🤓<br>
                 对人工智能技术、大模型有很高兴趣<br>
                 业余诗人，对乒乓球、足球、排球、游泳也略知一二😋<br>
@@ -43,38 +44,34 @@
 
     <section id="experiences" class="section bg-light">
     <div class="container">
-        <h2 class="section-title">我的经历</h2>
+        <h2 class="section-title" data-key="nav-exp">我的经历</h2>
         
         <div class="experiences-container">
-            <!-- 左侧照片 -->
             <div class="photo-column">
                 <img src="photo.jpg" alt="王小年" class="profile-photo">
             </div>
             
-            <!-- 右侧经历内容 -->
             <div class="content-column">
-                
-                <!-- 教育经历 -->
-                <h3>教育经历</h3>
-                <ul class="experience-list">
+                <h3 data-key="exp-edu-title">教育经历</h3>
+                <ul class="experience-list" data-key="exp-edu-list">
                     <li>南开大学，人工智能学院 2024.9-至今</li>
                     <li>南开大学，商学院 2023.9-2024.9</li>
                     <li>河北省香河一中 2020.9-2023.6</li>
                     <li>河北省香河二中 2017.9-2020.7</li>
                 </ul>
 
-                <h3>所获荣誉</h3>
-                <ul class="experience-list">
+                <h3 data-key="exp-honors-title">所获荣誉</h3>
+                <ul class="experience-list" data-key="exp-honors-list">
                     <li>中国人工智能应用场景创新挑战赛二等奖</li>
                     <li>阿里巴巴大模型冬季训练营结营二等奖</li>
                     <li>南开大学学业优秀奖学金</li>
                     <li>南开大学创新奖学金</li>
                 </ul>
 
-                <h3>工作经历</h3>
-                <ul class="experience-list">
+                <h3 data-key="exp-work-title">工作经历</h3>
+                <ul class="experience-list" data-key="exp-work-list">
                     <li>南开大学党委学工部干事</li>
-                    <li>南开大学党委宣传部视频小组成员</li>
+                    <li>南开大学党委宣传部视频小成员</li>
                     <li>第三十一届南开大学学生代表大会校代表</li>
                     <li>中国文旅博览会南开旅游大会2024新闻撰稿</li>
                 </ul>
@@ -82,21 +79,22 @@
         </div>
     </div>
 </section>
+
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">我的项目</h2>
+            <h2 class="section-title" data-key="nav-projects">我的项目</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>微型磁控机器人（在研）</h3>
-                    <p>磁场控制的微型机器人设计与实现</p>
+                    <h3 data-key="proj-1-t">微型磁控机器人（在研）</h3>
+                    <p data-key="proj-1-d">磁场控制的微型机器人设计与实现</p>
                 </div>
                 <div class="project-card">
-                    <h3>肌电假手的设计与控制（在研）</h3>
-                    <p>肌电信号的处理与控制系统的设计</p>
+                    <h3 data-key="proj-2-t">肌电假手的设计与控制（在研）</h3>
+                    <p data-key="proj-2-d">肌电信号的处理与控制系统的设计</p>
                 </div>
                 <div class="project-card">
-                    <h3>基于知识增强的优化智能体</h3>
-                    <p>融合模糊控制与启发函数的垂类模型</p>
+                    <h3 data-key="proj-3-t">基于知识增强的优化智能体</h3>
+                    <p data-key="proj-3-d">融合模糊控制与启发函数的垂类模型</p>
                 </div>
             </div>
         </div>
@@ -104,15 +102,15 @@
 
     <section id="contact" class="section bg-dark">
         <div class="container">
-            <h2 class="section-title text-white">联系我</h2>
-            <p class="text-white">微信：wyb1601187364</p>
-            <p class="text-white">邮箱：xiaonian_wang@qq.com</p>
-            <p class="text-white">通信地址：天津市津南区同砚路38号南开大学津南校区</p>
+            <h2 class="section-title text-white" data-key="nav-contact">联系我</h2>
+            <p class="text-white"><span data-key="con-wechat">微信</span>：wyb1601187364</p>
+            <p class="text-white"><span data-key="con-email">邮箱</span>：xiaonian_wang@qq.com</p>
+            <p class="text-white"><span data-key="con-addr">通信地址</span>：天津市津南区同砚路38号南开大学津南校区</p>
         </div>
     </section>
 
 <footer class="footer">
-    <p>王小年更新于2026.4.21 | 访问量 <span id="busuanzi_value_site_pv">0</span> 次</p>
+    <p><span data-key="footer-text">王小年更新于2026.4.21</span> | <span data-key="footer-pv">访问量</span> <span id="busuanzi_value_site_pv">0</span> <span data-key="footer-unit">次</span></p>
 </footer>
 
     <script src="script.js"></script>
