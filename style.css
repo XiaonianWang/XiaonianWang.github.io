@@ -9,6 +9,7 @@
 
 .about-text {
     max-width: 700px;      /* 限制宽度，防止文字排太长一行 */
+    
     margin: 0 auto;        /* 容器居中 */
     text-align: center;    /* 文字内容居中 */
     font-size: 1.1rem;     /* 稍微加大字号，更易读 */
