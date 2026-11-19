@@ -44,7 +44,7 @@ const langData = {
         'exp-edu-title': 'Education',
         'exp-edu-list': '<li>University of Chinese Academy of Sciences, Frontier Cross Disciplinary and Computer Science, PhD 2027.9-2032.7</li><li>Nankai University, College of Artificial Intelligence, Automation 2024.9-2027.7</li><li>Nankai University, Business School, Business Administration 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
         'exp-honors-title': 'Honors',
-        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li><li>Nankai University Public Ability Scholarship</li><li>Nankai University Merit Student</li>',
+        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Worked on data processing for Doubao (counts as an honor, I guess!)</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li><li>Nankai University Public Ability Scholarship</li><li>Nankai University Merit Student</li>',
         'exp-work-title': 'Activities',
         'exp-work-list': '<li>Staff, Student Affairs Dept, NKU</li><li>Member, Video Group, Publicity Dept, NKU</li><li>Delegate, 31st NKU Student Congress</li><li>News Writer, China Culture and Tourism Industries Expo & NKU Tourism Conference 2024</li>',
         'proj-1-t': 'Microrobots',
@@ -63,13 +63,11 @@ const langData = {
 };
 // 白名单：这些key是带HTML标签，必须innerHTML渲染
 const htmlKeys = new Set(['about-content','exp-edu-list','exp-honors-list','exp-work-list']);
-
 document.addEventListener('DOMContentLoaded', ()=>{
     // 读取本地存储语言
     let currentLang = localStorage.getItem('siteLang') || 'zh';
     const langBtn = document.getElementById('lang-switch');
     const htmlDom = document.documentElement;
-
     // 渲染函数，抽离出来，初始化和切换都调用
     function renderLang(){
         htmlDom.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
@@ -86,14 +84,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     // 初始渲染
     renderLang();
-
     // 切换事件
     langBtn.addEventListener('click', () => {
         currentLang = currentLang === 'zh' ? 'en' : 'zh';
         localStorage.setItem('siteLang', currentLang);
         renderLang();
     });
-
     // 3. 导航栏显隐
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
@@ -106,7 +102,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }, false);
-
     // 4. 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
