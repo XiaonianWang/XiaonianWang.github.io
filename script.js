@@ -27,7 +27,7 @@ const langData = {
         'con-email': '邮箱',
         'con-addr': '通信地址',
         'footer-text': '王小年更新于2026.11.19',
-        'footer-pv': '访问量',
+        'footer-pv': '今日访问量',
         'footer-unit': '次'
     },
     'en': {
@@ -57,7 +57,7 @@ const langData = {
         'con-email': 'Email',
         'con-addr': 'Address',
         'footer-text': 'Updated by Xiaonian Wang on 2026.11.19',
-        'footer-pv': 'Views',
+        'footer-pv': "Today's Views",
         'footer-unit': 'times'
     }
 };
