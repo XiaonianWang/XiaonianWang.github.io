@@ -44,7 +44,7 @@ const langData = {
         'exp-edu-title': 'Education',
         'exp-edu-list': '<li>University of Chinese Academy of Sciences, School of Interdisciplinary Science, Computer Science, PhD 2027.9-2032.7</li><li>Nankai University, College of Artificial Intelligence, Automation 2024.9-2027.7</li><li>Nankai University, Business School, Business Administration 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
         'exp-honors-title': 'Honors',
-        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Worked on data processing for Doubao (counts as an honor, I guess!)</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li><li>Nankai University Public Ability Scholarship</li><li>Nankai University Merit Student</li>',
+        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Worked on data processing for Doubao (counts as an honor, I guess!)</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li><li>Nankai University Gongneng Scholarship</li><li>Merit Student of Nankai University</li>',
         'exp-work-title': 'Activities',
         'exp-work-list': '<li>Staff, Student Affairs Dept, NKU</li><li>Member, Video Group, Publicity Dept, NKU</li><li>Delegate, 31st NKU Student Congress</li><li>News Writer, China Culture and Tourism Industries Expo & NKU Tourism Conference 2024</li>',
         'proj-1-t': 'Microrobots',
@@ -52,13 +52,13 @@ const langData = {
         'proj-2-t': 'EMG Prosthetic Hand',
         'proj-2-d': 'Processing of EMG signals and control system design',
         'proj-3-t': 'Knowledge-Enhanced Agent',
-        'proj-3-d': 'A vertical model fusing fuzzy control and heuristic functions',
+        'proj-3-d': 'A domain-specific model fusing fuzzy control and heuristic functions',
         'con-wechat': 'WeChat',
         'con-email': 'Email',
         'con-addr': 'Address',
         'footer-text': 'Updated by Xiaonian Wang on 2026.11.19',
         'footer-pv': "Today's Views",
-        'footer-unit': 'times'
+        'footer-unit': ''
     }
 };
 // 白名单：这些key是带HTML标签，必须innerHTML渲染
