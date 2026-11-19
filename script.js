@@ -26,7 +26,7 @@ const langData = {
         'con-wechat': '微信',
         'con-email': '邮箱',
         'con-addr': '通信地址',
-        'footer-text': '王小年更新于2026.4.21',
+        'footer-text': '王小年更新于2026.11.19',
         'footer-pv': '访问量',
         'footer-unit': '次'
     },
@@ -42,68 +42,80 @@ const langData = {
         'hero-btn': 'Learn More',
         'about-content': 'Student at the College of Artificial Intelligence, Nankai University. Focusing on Control Theory and Microrobotics. 🤓<br>Passionate about AI and Large Language Models.<br>Amateur poet, also enjoy table tennis, football, volleyball, and swimming. 😋<br>Dream is to return to the countryside after finishing studies.<br>Welcome to discuss any interesting topics with me!',
         'exp-edu-title': 'Education',
-        'exp-edu-list': '<li>Nankai University, College of Artificial and Intelligence 2024.9-Present</li><li>Nankai University, Business School 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
+        'exp-edu-list': '<li>University of Chinese Academy of Sciences, Frontier Cross Disciplinary and Computer Science, PhD 2027.9-2032.7</li><li>Nankai University, College of Artificial Intelligence, Automation 2024.9-2027.7</li><li>Nankai University, Business School, Business Administration 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
         'exp-honors-title': 'Honors',
-        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li>',
+        'exp-honors-list': '<li>2nd Prize, China AI Application Scenario Innovation Challenge</li><li>2nd Prize, Alibaba LLM Winter Camp</li><li>Nankai University Academic Excellence Scholarship</li><li>Nankai University Innovation Scholarship</li><li>Nankai University Public Ability Scholarship</li><li>Nankai University Merit Student</li>',
         'exp-work-title': 'Activities',
         'exp-work-list': '<li>Staff, Student Affairs Dept, NKU</li><li>Member, Video Group, Publicity Dept, NKU</li><li>Delegate, 31st NKU Student Congress</li><li>News Writer, China Culture and Tourism Industries Expo & NKU Tourism Conference 2024</li>',
-        'proj-1-t': 'Microrobots (Researching)',
+        'proj-1-t': 'Microrobots',
         'proj-1-d': 'Design and implementation of magnetic-controlled microrobots',
-        'proj-2-t': 'EMG Prosthetic Hand (Researching)',
+        'proj-2-t': 'EMG Prosthetic Hand',
         'proj-2-d': 'Processing of EMG signals and control system design',
         'proj-3-t': 'Knowledge-Enhanced Agent',
         'proj-3-d': 'A vertical model fusing fuzzy control and heuristic functions',
         'con-wechat': 'WeChat',
         'con-email': 'Email',
         'con-addr': 'Address',
-        'footer-text': 'Updated by Xiaonian Wang on 2026.4.21',
+        'footer-text': 'Updated by Xiaonian Wang on 2026.11.19',
         'footer-pv': 'Views',
         'footer-unit': 'times'
     }
 };
+// 白名单：这些key是带HTML标签，必须innerHTML渲染
+const htmlKeys = new Set(['about-content','exp-edu-list','exp-honors-list','exp-work-list']);
 
-// 2. 切换逻辑
-let currentLang = 'zh';
-const langBtn = document.getElementById('lang-switch');
+document.addEventListener('DOMContentLoaded', ()=>{
+    // 读取本地存储语言
+    let currentLang = localStorage.getItem('siteLang') || 'zh';
+    const langBtn = document.getElementById('lang-switch');
+    const htmlDom = document.documentElement;
 
-langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'zh' ? 'en' : 'zh';
-    langBtn.textContent = currentLang === 'zh' ? 'EN' : '中文';
-    
-    document.querySelectorAll('[data-key]').forEach(elem => {
-        const key = elem.getAttribute('data-key');
-        if (langData[currentLang][key]) {
-            // 检查内容是否包含 HTML 标签（如 <li> 或 <br>）
-            if (langData[currentLang][key].includes('<')) {
+    // 渲染函数，抽离出来，初始化和切换都调用
+    function renderLang(){
+        htmlDom.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+        langBtn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+        document.querySelectorAll('[data-key]').forEach(elem => {
+            const key = elem.getAttribute('data-key');
+            if (!langData[currentLang][key]) return;
+            if(htmlKeys.has(key)){
                 elem.innerHTML = langData[currentLang][key];
-            } else {
+            }else{
                 elem.textContent = langData[currentLang][key];
             }
-        }
-    });
-});
-
-// 3. 导航栏显隐
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.classList.add('navbar-hidden');
-    } else {
-        navbar.classList.remove('navbar-hidden');
+        })
     }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-}, false);
+    // 初始渲染
+    renderLang();
 
-// 4. 平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        if(this.getAttribute('href') === "#") return;
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+    // 切换事件
+    langBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        localStorage.setItem('siteLang', currentLang);
+        renderLang();
     });
-});
+
+    // 3. 导航栏显隐
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.classList.add('navbar-hidden');
+        } else {
+            navbar.classList.remove('navbar-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, false);
+
+    // 4. 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if(this.getAttribute('href') === "#") return;
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+})
