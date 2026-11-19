@@ -40,7 +40,7 @@ const langData = {
         'hero-hi': "Hello, I'm",
         'hero-sub': 'Welcome to my personal homepage 🤓👆',
         'hero-btn': 'Learn More',
-        'about-content': 'Student at the College of Artificial Intelligence, Nankai University. Focusing on Control Theory and Microrobotics. 🤓<br>Passionate about AI and Large Language Models.<br>Amateur poet, also enjoy table tennis, football, volleyball, and swimming. 😋<br>Dream is to return to the countryside after finishing studies.<br>Welcome to discuss any interesting topics with me!',
+        'about-content': 'Student at the College of Artificial Intelligence, Nankai University. Focusing on Control Theory, Microrobotics, AI and large model algorithms 🤓<br>Currently working on multimodal large models and embodied intelligence algorithms.<br>Amateur poet, painter and guitarist. I also have basic knowledge of table tennis, football, volleyball and swimming. 😋<br>My dream is to go back to farming after graduation.<br>Feel free to discuss anything interesting with me!',
         'exp-edu-title': 'Education',
         'exp-edu-list': '<li>University of Chinese Academy of Sciences, Frontier Cross Disciplinary and Computer Science, PhD 2027.9-2032.7</li><li>Nankai University, College of Artificial Intelligence, Automation 2024.9-2027.7</li><li>Nankai University, Business School, Business Administration 2023.9-2024.9</li><li>Xianghe No.1 High School, Hebei 2020.9-2023.6</li><li>Xianghe No.2 Middle School, Hebei 2017.9-2020.7</li>',
         'exp-honors-title': 'Honors',
